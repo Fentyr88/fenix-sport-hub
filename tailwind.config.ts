@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['"Schibsted Grotesk"', 'sans-serif'],
+        body: ['"Geist Mono"', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        fenix: {
+          mint: "hsl(var(--fenix-mint))",
+          orange: "hsl(var(--fenix-orange))",
+          red: "hsl(var(--fenix-red))",
+          obsidian: "hsl(var(--fenix-obsidian))",
+          carbon: "hsl(var(--fenix-carbon))",
+          glass: "hsl(var(--fenix-glass))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -60,25 +72,17 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 1px)",
+        sm: "calc(var(--radius) - 2px)",
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
